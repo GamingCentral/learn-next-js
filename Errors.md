@@ -1,15 +1,18 @@
 # All the errors i faced
 
-### Error: The default export is not a React Component in page: "/"
+## 1. Error: The default export is not a React Component in page: "/"
 This error occured when the layout.tsx was left empty in the app folder. This makes sense cause the children i.e body of the text in html
 is no where mentioned like we did with index.jsx file in react.js where 
 ***index.jsx:***
 
-import React from 'react';
-import { ReactDOM } from "react";
+import React from 'react';  
 
-reactDOM.render(
-  <div>
+import { ReactDOM } from "react";  
+
+
+reactDOM.render(  
+
+  <div>  
     <App />
   </div>,
   document.getElementbyID("root")
