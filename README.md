@@ -23,13 +23,11 @@ we can start up from editing src/app/page.tsx/jsx .
 by default the html file will be created by npm from the main page.tsx file
 
 ## Routing Basics:
-
 a next.js app contains **folders and files.**
 each folder to file path defines a route ie a navigation path with the url to get to the page.
 the folders are meant to be parents and can be renderable or non-rederable.
 
 ### Page
-
 each renderable folder contains its ***"page.jsx/tsx/js"*** file.
 this page file is a leaf node for the DOM tree.
 pages are **server components** by default but can be made as **client components** too as needed.
@@ -40,9 +38,7 @@ export default function pageName() {
     return (...);
 }
 
-
 ### Layout:
-
 a layout is a component that can next other components or can be nested into another layout.
 these layout is like skeleton that doesnt change over the pages inside that folder or sub-folders.
 these donot get re-rendered as long as user stays in that route.
@@ -84,7 +80,6 @@ export default function Layout({
 }
 
 ### Template:
-
 similar to a layout but yet the difference is that rather than maintaining states like layout does it creates
 a new instance of the page and serves it to the user.
 
@@ -95,7 +90,6 @@ export default function Template({ children }: { children: React.ReactNode }) {
 
 
 ### Meta Data:
-
 can modify the head contents using routing and calling metadata APIs
 metadata can be defined from **metadata object** and can be included in index.jsx/tsx or page.jsx/tsx
 
@@ -108,7 +102,6 @@ export default function ...() {...}
 
 
 ### Linking and Redirects:
-
 in this section we will see how to go between various routes.
 we have 4 ways of doing this...
 
