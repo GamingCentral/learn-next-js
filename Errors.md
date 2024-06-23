@@ -47,3 +47,11 @@ This was due to material-ui rebranding to mui.
 ## 3. Module not found: Can't resolve '@emotion/react' {Material UI}
 
 @emotion/react @emotion/styled were not installed in my machine so i used: npm install @emotion/react @emotion/styled in terminal.
+
+## 4. Container not occupying 100% width {Material UI}
+
+This error is because the maxWidth was forgotten but is mandatory prop to Component element. Setting it to xl had taken care of this issue.
+
+## 5. Appbar component overlapping main element ie children {Material UI}
+
+This error can be resolved by setting position to static instead of default fixed.

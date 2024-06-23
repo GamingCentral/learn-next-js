@@ -1,0 +1,24 @@
+.appbarTop {
+    box-shadow: none !important;
+}
+.TopBar {
+    padding: 8px 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 64px;
+     
+}
+.brandName {
+    color: blue !important;
+    background-color: white !important;
+    box-shadow: none !important;
+    background: white !important;
+}
+.glassy {
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* For Safari support */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+  

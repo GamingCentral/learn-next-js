@@ -9,26 +9,14 @@
    -src ... contains app which has icons, css, layout and a page file
    -other components...
 
-we can start up from editing src/app/page.tsx/jsx .
-by default the html file will be created by npm from the main page.tsx file
+we can start up from editing src/app/page.tsx/jsx.
+by default the html file will be created by npm from the main page.tsx file  
 
-## How to initialize a next js app:
+## Routing Basics:  
 
-1. go to cmd and execute: npx create-next-app@latest.
-2. by default the app architecture is:
-   -node_modules
-   -public ...has svgs by default
-   -src ... contains app which has icons, css, layout and a page file
-   -other components...
-
-we can start up from editing src/app/page.tsx/jsx .
-by default the html file will be created by npm from the main page.tsx file
-
-## Routing Basics:
-
-a next.js app contains **folders and files.**
-each folder to file path defines a route ie a navigation path with the url to get to the page.
-the folders are meant to be parents and can be renderable or non-rederable.
+a next.js app contains **folders and files.**  
+each folder to file path defines a route ie a navigation path with the url to get to the page.  
+the folders are meant to be parents and can be renderable or non-rederable.  
 
 ### Page
 
@@ -38,74 +26,68 @@ pages are **server components** by default but can be made as **client component
 can also **fetch data.**
 
 **_syntax_**
-export default function pageName() {
-return (...);
-}
+export default function pageName() {  
+return (...);  
+}  
 
 ### Layout:
 
-a layout is a component that can next other components or can be nested into another layout.
-these layout is like skeleton that doesnt change over the pages inside that folder or sub-folders.
-these donot get re-rendered as long as user stays in that route.
-contents inside layout can change but not the layout itself.
-these are default server components but can be made to client components.
-can do data fetching as well
+a layout is a component that can next other components or can be nested into another layout. 
+These layout is like skeleton that doesnt change over the pages inside that folder or sub-folders. These donot get re-rendered as long as user stays in that route. Contents inside layout can change but not the layout itself. These are default server components but can be made to client components. Can do data fetching as well. 
 
 **_syntax_**
-export default function layout({
-children, //a page or nested layout
-}: {
-children: React.ReactNode
-})
-{
-return (
-{children}
-);  
-}
+export default function layout({  
+   children, //a page or nested layout  
+   }: {  
+      children: React.ReactNode  
+   })  
+   {  
+   return (  
+      {children}  
+   );  
+}  
 
 #### root layout:
 
-this resides directly in app/rootLayout.tsx ie this is the a layout that is applicable to all the pages.
-this is requried and must contain html and body tags as such:
+This resides directly in app/rootLayout.tsx ie this is the a layout that is applicable to all the pages. this is requried and must contain html and body tags as such:  
 
-**_syntax_**
+**_syntax_**  
 
-export default function Layout({
-children,
-}: {
-children: React.ReactNode
-}) {
-return (
-| html lang="en" |
-| body |
-{/_ Layout UI _/}
-| main | {children}| /main |
-| /body |
-| /html |
-)
-}
+export default function Layout({  
+   children,  
+   }: {  
+   children: React.ReactNode  
+   }) {  
+   return (  
+      | html lang="en" |  
+         | body |  
+            {/_ Layout UI _/}  
+            | main | {children}| /main |  
+         | /body |  
+      | /html |  
+   )  
+}  
+If u want to nest the layouts i.e if the want a layout to wrap inside another layout then place the parent layout in the directory above the curent directory ie path.  
 
 ### Template:
 
-similar to a layout but yet the difference is that rather than maintaining states like layout does it creates
-a new instance of the page and serves it to the user.
+similar to a layout but yet the difference is that rather than maintaining states like layout does it creates a new instance of the page and serves it to the user.  
 
-**_syntax_**
-export default function Template({ children }: { children: React.ReactNode }) {
-return | div | {children}| /div |
-}
+**_syntax_**  
+export default function Template({ children }: { children: React.ReactNode }) {  
+return | div | {children}| /div |  
+}  
 
 ### Meta Data:
 
-can modify the head contents using routing and calling metadata APIs
-metadata can be defined from **metadata object** and can be included in index.jsx/tsx or page.jsx/tsx
+can modify the head contents using routing and calling metadata APIs. Metadata can be defined from **metadata object** and can be included in index.jsx/tsx or page.jsx/tsx  
 
-**_syntax_**
-import { Metadata } from 'next'
-export const metadata: Metadata = {
-title: 'Next.js',
-}
-export default function ...() {...}
+**_syntax_**  
+import { Metadata } from 'next'  
+export const metadata: Metadata = {  
+   title: 'Next.js',  
+}  
+export default function ...() {...}  
 
 ### Linking and Redirects:
 
