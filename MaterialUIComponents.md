@@ -10,9 +10,9 @@ Box is a generic container that is aimed at providing functionality for grouping
 By default Box renders as div but this can be changed using attribute **component**. This can be dones as such:  
 ***syntax:***  
 
-<Box component="section">  
+'<Box component="section">  
 //this is rendered as section element rather than div  
-<Box/>  
+<Box/>'  
 
 For various other properties can also be used directly on Box element. Refer to Properites in the **MaterialUIProperties** file.  
 

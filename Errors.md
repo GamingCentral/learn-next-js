@@ -8,9 +8,9 @@ is no where mentioned like we did with index.jsx file in react.js where
 import React from 'react';  
 import { ReactDOM } from "react";  
 reactDOM.render(  
-  <div>  
+  '<div>  
     <App />  
-  </div>,  
+  </div>',  
   document.getElementbyID("root")  
 );  
 
@@ -31,9 +31,9 @@ export default function RootLayout({
   children: React.ReactNode  
 }) {  
   return (  
-    <html lang="en">  
+    '<html lang="en">  
       <body>{children}</body>  
-    </html>  
+    </html> ' 
   )
 }  
 ***rendering is done here.***  
