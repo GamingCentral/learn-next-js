@@ -1,6 +1,6 @@
 # All the errors i faced
 
-## 1. Error: The default export is not a React Component in page: "/"
+## 1. Error: The default export is not a React Component in page: "/" {Next.js}  
 This error occured when the layout.tsx was left empty in the app folder. This makes sense cause the children i.e body of the text in html
 is no where mentioned like we did with index.jsx file in react.js where 
 ***index.jsx:***
@@ -35,6 +35,14 @@ export default function RootLayout({
       <body>{children}</body>  
     </html>  
   )
-} ***rendering is done here.***  
+}  
+***rendering is done here.***  
+
+## 2. Box cannot be exported as a JSX component {Material UI}
+This happened due to the fact that my <Box><Box/> was imported under '@material-ui/core/Box' rather than '@mui/materials/Box'.  
+This was due to material-ui rebranding to mui.
+
+## 3. Module not found: Can't resolve '@emotion/react' {Material UI}
+@emotion/react @emotion/styled were not installed in my machine so i used: npm install @emotion/react @emotion/styled in terminal.
 
 

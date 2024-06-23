@@ -1,10 +1,10 @@
 "use client";
-import Box from '@material-ui/core/Box';
+import Box from '@mui/material/Box';
 
 function Home() {
     //here lies the home page...
     return (
-        <div>hello</div>
+            <Box>hello</Box>
     );
 }
 
