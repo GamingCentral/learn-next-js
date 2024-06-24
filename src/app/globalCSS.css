@@ -25,4 +25,9 @@ main {
     flex: 1;
     height: 100%;
 }
+
+.mainContent {
+    position: relative; /* ensures that top doesnt overlap with main content */
+    top: 64px;
+}
   

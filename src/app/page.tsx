@@ -6,7 +6,7 @@ import Container from '@mui/material/Container';
 function Home() {
     //here lies the home page...
     return (
-        <Container sx={{ margin: 0}} maxWidth="xl">
+        <Container className='mainContent' sx={{ margin: 0}} maxWidth="xl">
             hello
         </Container>
     );
